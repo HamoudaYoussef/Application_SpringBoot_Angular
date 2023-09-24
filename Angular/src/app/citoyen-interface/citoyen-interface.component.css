@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.navbar-links li a:hover {
+  color: #007bff;
+}
+/* Styles for the sondage card */
+.sondage-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+.sondage-card:hover {
+  transform: translateY(-5px);
+}
+
+.sondage-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sondage-card-description {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Add more styles as needed */

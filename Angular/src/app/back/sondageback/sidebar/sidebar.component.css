@@ -1,0 +1,47 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #343a40;
+  padding-top: 20px;
+  color: #fff;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #495057;
+}
+
+.menu i {
+  margin-right: 10px;
+}
+
+/* Style pour les liens actifs */
+.menu a.router-link-active {
+  background-color: #007bff;
+}

@@ -1,0 +1,56 @@
+<div class="reponse reponse-hover" >
+  <div class="form-group row custom-input">
+    <label class="col-sm-2 col-form-label">Titre</label>
+    <div class="col-8">
+      <input style="background-color: rgba(116, 235, 213, 0);" type="string" class="custom-input" [(ngModel)]="titre">
+    </div>
+  </div>
+  <div class="form-group row " style="height: 150px;">
+
+    <div class="col-4">
+      <button class="reponse-button btn btn-light" (click)="addReponse()">Ajouter Réponses</button>
+    </div>
+    <div>
+      <div style="background-color: rgba(116, 235, 213, 0);" *ngFor="let reponse of reponses; let i = index" class="aff">
+        <div class=" custom-input">
+          <ng-container *ngIf="!isEditing; else editMode">
+            <p  class="mb-2 espace" (click)="editTitre()">{{ i + 1 }}) {{ reponse.titre }}</p>
+          </ng-container>
+          <ng-template #editMode>
+            <div style="display: flex; align-items: center;">
+              <input style="margin-right: 10px; background-color: rgba(116, 235, 213, 0); flex: 1;" type="text" class="custom-input" [(ngModel)]="reponse.titre">
+              <button class="btn btn-success" (click)="saveTitre(reponse)"  style="background: none; border: none; padding: 0; margin: 0; cursor: pointer;">
+                <svg color="black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                </svg>
+              </button>
+            </div>
+            <button class="btn btn-danger" (click)="openPopupRep()" style="background: none; border: none; padding: 0; margin: 0; cursor: pointer;">
+              <svg color="black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16">
+                <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+              </svg>
+            </button>
+           <!-- Ajoutez ce bouton de suppression -->
+          </ng-template>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div  id="popupRep" class="popupRep" *ngFor="let reponse of reponses">
+  <div class="popupRep-content">
+    <span class="popupRep-close" (click)="closePopupRep()">&times;</span>
+    <h2>Confirmation</h2>
+    <p>Êtes-vous sûr de vouloir supprimer cette question ?</p>
+    <button class="btn btn-success" (click)="onDeleteReponse(reponse.id)">Oui</button>
+    <button class="btn btn-danger" (click)="closePopupRep()">Annuler</button>
+  </div>
+</div>
+<div  id="popupsup" class="popupsup">
+  <div class="popupsup-content">
+    <h2>Reponse supprimé avec succès</h2>
+  </div>
+</div>

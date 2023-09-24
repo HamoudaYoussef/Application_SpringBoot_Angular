@@ -1,0 +1,150 @@
+/* Couleurs */
+body {
+  background-color:rgba(116, 235, 213, 0); /* Couleur de fond générale */
+  color: #333; /* Couleur du texte principale */
+}
+
+.question {
+  background-color: rgba(116, 235, 213, 0);  /* Couleur de fond de chaque boîte de question */
+  border: 1px solid rgba(116, 235, 213, 0);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px; /* Coins arrondis */
+}
+
+.question-container {
+  display: flex;
+  align-items: center;
+}
+
+.question-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #090333; /* Couleur du titre de la question */
+}
+
+/* Style du bouton "Envoyer" */
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #007bff; /* Couleur de fond du bouton Envoyer */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  border-radius: 10px; /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+
+/* Style pour les labels des questions */
+.form-group label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Style pour les titres du sondage et de la description */
+.content {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group h1 {
+  font-size: 24px;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.col-sm-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  width: 100%;
+}
+
+/* Adjust margin-top */
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+/* Style pour le conteneur des réponses */
+.reponses-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Ajout de marges pour l'espace */
+.margin-top {
+  margin-top: 20px;
+}
+.margin-bottom {
+  margin-bottom: 20px;
+}
+.margin-right {
+  margin-right: 20px;
+}
+.margin-left {
+  margin-left: 20px;
+}
+
+
+
+.div-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style pour les labels */
+label {
+  font-weight: bold;
+  margin-top: 20px;
+  flex: 1; /* Permet au label de s'étirer pour occuper l'espace disponible */
+}
+
+/* Style pour les titres */
+h1 {
+  font-size: 24px;
+}
+
+/* Style pour la deuxième div */
+
+ .multiline-description {
+  word-wrap: break-word;
+}
+
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+}
+
+
+.background {
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  height: 100%; /* Make sure the background covers the entire height */
+
+}
+.content {
+  padding: 20px;
+  text-align: center;
+  color: #090333; /* Couleur du texte */
+}

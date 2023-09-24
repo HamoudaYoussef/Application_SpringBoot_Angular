@@ -1,0 +1,46 @@
+.custom-sidebar {
+    background: linear-gradient(to bottom, rgb(25, 25, 33), rgb(55, 55, 56)); /* Dégradé vert */
+  color: #ffffff; /* Texte blanc */
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.custom-sidebar .sidebar-header {
+  background-color: rgb(7, 100, 250); /* Fond rouge pour l'en-tête */
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-sidebar ul.components {
+  padding: 20px;
+}
+
+.custom-sidebar ul p {
+  padding: 10px 0;
+  font-size: 18px; /* Taille du texte */
+}
+
+.custom-sidebar a {
+  color: white; /* Texte bleu */
+  padding: 10px 20px;
+  display: block;
+  transition: 0.3s;
+  font-size: 16px; /* Taille du texte */
+  text-decoration: none;
+}
+
+.custom-sidebar a:hover {
+  background-color: rgb(75, 166, 214); /* Fond bleu au survol */
+  color: black; /* Texte blanc au survol */
+  text-decoration: none;
+}
+
+.custom-sidebar .active a {
+  background-color: #ff0000; /* Fond rouge pour l'élément actif */
+  color: #ffffff; /* Texte blanc pour l'élément actif */
+}

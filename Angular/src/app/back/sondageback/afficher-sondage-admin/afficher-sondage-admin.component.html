@@ -1,0 +1,17 @@
+<div *ngIf="sondage">
+    <h2>{{ sondage.critere }}</h2>
+    <p>Lien : {{ sondage.lien }}</p>
+    <p>Nombre de participants : {{ sondage.nbr_participant }}</p>
+    <p>Entreprise : {{ sondage.entreprise.companyname }}</p> <!-- Utilisation de ? pour éviter une erreur si entreprise est null -->
+    <p>Cout</p>
+    <input type="number" class="form-control" [(ngModel)]="sondage.cout" name="cout"> <!-- Utilisation de [(ngModel)] pour lier deux sens (two-way binding) -->
+    <div *ngFor="let question of questions">
+        <p>{{ question.titre }}</p>
+        <ul>
+            <!-- Ici tu peux ajouter le contenu des questions si nécessaire -->
+        </ul>
+    </div>
+    <button (click)="updateSondage(sondage, sondage.id)">Mettre à jour le coût</button>
+    <button (click)="fetchRandomUsers(sondage.id)">accepter sondage</button>
+</div>
+<button (click)="acceuil()" >acceuil</button>

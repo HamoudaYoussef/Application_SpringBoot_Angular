@@ -1,0 +1,16 @@
+<button (click)="logout()">logout</button>
+<div class="row">
+  <div class="col-md-3 mb-4" *ngFor="let s of sondages">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ s.entreprise.companyname }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ s.critere }}</h6>
+        <p class="card-text">{{ s.nbr_participant }}</p>
+        <button class="btn btn-success"(click)="suivant(s.id)">go to sondage</button>
+
+
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-success"(click)="entreprise()">entreprise</button>
+</div>

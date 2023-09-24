@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-3 mb-4" *ngFor="let e of entreprises">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ e.companyname }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ e.email }}</h6>
+        <p class="card-text">{{ e.points }}</p>
+        <button class="btn btn-success" (click)="onHistory(e.id)">Go to History</button>
+        <div class="input-group">
+          <input type="number" class="form-control" [(ngModel)]="e.points" placeholder="Points to add">
+          <div class="input-group-append">
+            <button class="btn btn-success" (click)="ajouterPoints(e.id, e.points)">Add Points</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

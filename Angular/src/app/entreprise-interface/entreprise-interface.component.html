@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="custom-sidebar">
+        <h3  style="padding: 20px;  text-align: center;" class="text-white">Votre Application</h3>
+    <ul class="list-unstyled components">
+        <p class="text-white">Bienvenue, {{ getCompanyNameFromCookie() }}</p>
+        <li>
+            <a href="#" class="text-red">
+                Accueil
+            </a>
+        </li>
+        <li>
+            <a class="text-red" (click)="addSondage()">
+                Ajouter Sondage
+            </a>
+        </li>
+        <li>
+            <a  class="text-red" (click)="logout()">
+                Logout
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+  <!-- Page Content -->
+  <div id="content">
+    <button id="sidebarCollapse" class="btn btn-info">
+      <i class="fas fa-align-left"></i>
+    </button>
+    <div style="margin-left: 300px;" class="container">
+      <app-list-sondage [entrepriseId]="entrepriseId"></app-list-sondage>
+    </div>
+  </div>
+</div>

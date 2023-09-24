@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-5 mb-2" *ngFor="let s of sondages">
+    <div class="card border-primary" style="width: 500px; " >
+      <div class="card-body">
+        <ul (click)="onSondage(s.id)" style="cursor: pointer;" class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Nom du sondage : </strong>{{ s.nomsondage }}
+          </li>
+          <li class="list-group-item">
+            <strong>Description: </strong>{{ s.description }}
+          </li>
+          <li class="list-group-item">
+            <strong>Nombre de participants:</strong> {{ s.nbr_participant }}
+          </li>
+          <li class="list-group-item">
+            <strong>Age entre:</strong> {{ s.minage }} - {{ s.maxage }}
+          </li>
+          <li class="list-group-item">
+            <strong>Sexe:</strong> {{ s.gender }}
+          </li>
+        </ul>
+        <div  id="popup" class="popup">
+          <div class="popup-content">
+            <span class="popup-close" (click)="closePopup()">&times;</span>
+            <h2>Sondage  <span class="blue-text">{{nomSondageSelectionne }} </span>envoyé avec succès</h2>
+          </div>
+        </div>
+        <button (click)="sendToUsers(s.id)" class="btn btn-success">Envoyer le sondage</button>
+
+        <button (click)="openPopupS(s.id)" class="btn btn-danger"  style="margin-left: 110px;">supprimer ce sondage</button>
+      </div>
+    </div>
+    <div  id="popupS" class="popupS" >
+      <div class="popupS-content">
+        <span class="popupQ-close" (click)="closePopupS()">&times;</span>
+        <h2>Confirmation</h2>
+        <p>Êtes-vous sûr de vouloir supprimer cette question ?</p>
+        <button class="btn btn-success" (click)="deleteSondage()">Oui</button>
+        <button class="btn btn-danger" (click)="closePopupS()">Annuler</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div  id="popupsupS" class="popupsupS">
+  <div class="popupsupS-content">
+    <h2>Sondage supprimé avec succès</h2>
+  </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+
+<div class="background">
+<div class="content">
+  <div class="div-container">
+    <label class="col-sm-4 col-form-label">Nom du sondage:</label>
+    <div class="col-4">
+      <h1>{{sondage.nomsondage}}</h1>
+    </div>
+  </div>
+
+  <div class="div-container">
+    <label class="col-sm-4 col-form-label">Description du sondage:</label>
+    <div class="col-4">
+      <h4 class="multiline-description">{{sondage.description}}</h4>
+    </div>
+  </div>
+
+
+
+  <div class="reponses-container d-flex flex-wrap " style="background-color: rgba(116, 235, 213, 0); ">
+    <div  style="background-color: rgba(116, 235, 213, 0); " *ngFor="let question of questions; let i = index">
+      <div class="question ">
+        <div class="question-container">
+        <ng-container >
+          <p class="question-title" >{{ i + 1 }}) {{ question.titre }}</p>
+          </ng-container>
+        </div>
+        <ng-template >
+          <!--button class="btn btn-danger" (click)="openPopupRep()"> Supprimer</button!-->
+         <!-- Ajoutez ce bouton de suppression -->
+        </ng-template>        <!-- Afficher les détails de chaque question ici -->
+        <app-reponseuser [questionId]="question.id"></app-reponseuser>
+      </div>
+    </div>
+    <button (click)="saveReponses()" style="margin-top: 220px; width: 200px; height: 50px;">Envoyer</button>
+  </div>
+</div>
+</div>
+

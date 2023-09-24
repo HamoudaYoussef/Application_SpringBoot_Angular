@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Enter your password">
+      </div>
+      <button class="btn btn-success" (click)="onSubmit()">Login</button>
+      <button class="btn btn-success" (click)="signup()">Sign Up as a company</button>
+      <button class="btn btn-success" (click)="signupC()">Sign Up as a citizen</button>
+    </div>
+  </div>
+</body>
+</html>

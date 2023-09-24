@@ -1,0 +1,78 @@
+.reponses-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reponse {
+  width: 370px; /* Utilisez une largeur de 100% pour occuper toute la largeur du conteneur parent */
+  max-width: 370px; /* Assurez-vous que la largeur ne dépasse pas la largeur du conteneur parent */
+  max-height: 300px; /* Hauteur maximale avec défilement vertical */
+  overflow-y: auto; /* Activer le défilement vertical si le contenu dépasse la hauteur maximale */
+  padding: 10px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  background-color: rgba(116, 235, 213, 0); /* Couleur de fond du bouton */
+  border: 1px solid #ccc;
+}
+.aff {
+  width: 300px; /* Utilisez une largeur de 100% pour occuper toute la largeur du conteneur parent */
+  max-width: 300px; /* Assurez-vous que la largeur ne dépasse pas la largeur du conteneur parent */
+  max-height: 100%; /* Hauteur maximale avec défilement vertical */
+  overflow-x: auto; /* Activer le défilement vertical si le contenu dépasse la hauteur maximale */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  background-color: rgba(116, 235, 213, 0); /* Couleur de fond des réponses */
+  margin-top: 10px; /* Espacement entre les réponses */
+
+}
+
+.backgroundGreen {
+  background-color: #007bff; /* Ou toute autre couleur que vous souhaitez */
+}
+
+.reponse-button {
+  margin-top: 10px !important;
+  width: 200px;
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 70px;
+}
+.espace {
+  padding: 2px;
+}
+@keyframes agrandir {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.agrandi {
+  animation: agrandir 1s forwards; /* Utilisation de l'animation agrandir pendant 1 seconde */
+}
+
+.reponse-hover {
+  transition: transform 0.3s ease-in-out; /* Ajoutez une transition pour un effet en douceur */
+  transform-origin: top left; /* Définissez l'origine de la transformation en haut à gauche */
+}
+
+.reponse-hover:hover {
+  transform: scale(1.2); /* Appliquez une mise à l'échelle lorsqu'il est survolé */
+}
+
+.check-icon {
+  color: #28a745; /* Couleur de l'icône de vérification */
+  font-size: 24px; /* Taille de l'icône de vérification */
+  margin-left: 10px; /* Marge à gauche de l'icône */
+}
+
